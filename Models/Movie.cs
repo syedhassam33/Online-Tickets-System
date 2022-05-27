@@ -27,7 +27,7 @@ namespace OnlineTicketSystem.Models
         //Cienma
         [ForeignKey("CinemaId")]
         public int CinemaId { get; set; }
-        public Cinema Cinema { get; set; }
+        public Cinemas Cinema { get; set; }
 
 
         //Producer

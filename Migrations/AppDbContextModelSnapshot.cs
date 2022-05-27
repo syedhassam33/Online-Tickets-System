@@ -55,14 +55,14 @@ namespace OnlineTicketSystem.Migrations
                     b.ToTable("Actors_Movies");
                 });
 
-            modelBuilder.Entity("OnlineTicketSystem.Models.Cinema", b =>
+            modelBuilder.Entity("OnlineTicketSystem.Models.Cinemas", b =>
                 {
                     b.Property<int>("CinId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Description")
+                    b.Property<string>("DescriptionCin")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LogoURL")
@@ -164,7 +164,7 @@ namespace OnlineTicketSystem.Migrations
 
             modelBuilder.Entity("OnlineTicketSystem.Models.Movie", b =>
                 {
-                    b.HasOne("OnlineTicketSystem.Models.Cinema", "Cinema")
+                    b.HasOne("OnlineTicketSystem.Models.Cinemas", "Cinema")
                         .WithMany("Movies")
                         .HasForeignKey("CinemaId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -184,7 +184,7 @@ namespace OnlineTicketSystem.Migrations
                     b.Navigation("Actor_Movie");
                 });
 
-            modelBuilder.Entity("OnlineTicketSystem.Models.Cinema", b =>
+            modelBuilder.Entity("OnlineTicketSystem.Models.Cinemas", b =>
                 {
                     b.Navigation("Movies");
                 });

@@ -19,37 +19,37 @@ namespace OnlineTicketSystem.Data
 
                 if (!context.Cinemas.Any())
                 {
-                    context.Cinemas.AddRange(new List<Cinema>()
+                    context.Cinemas.AddRange(new List<Cinemas>()
                     {
-                        new Cinema()
+                        new Cinemas()
                         {
                             Name = "Cinema 1",
                             LogoURL = "http://dotnethow.net/images/cinemas/cinema-1.jpeg",
-                            Description = "This is the description of the first cinema"
+                            DescriptionCin = "This is the description of the first cinema"
                         },
-                        new Cinema()
+                        new Cinemas()
                         {
                             Name = "Cinema 2",
                             LogoURL = "http://dotnethow.net/images/cinemas/cinema-2.jpeg",
-                            Description = "This is the description of the first cinema"
+                            DescriptionCin = "This is the description of the second cinema"
                         },
-                        new Cinema()
+                        new Cinemas()
                         {
                             Name = "Cinema 3",
                             LogoURL = "http://dotnethow.net/images/cinemas/cinema-3.jpeg",
-                            Description = "This is the description of the first cinema"
+                            DescriptionCin = "This is the description of the third cinema"
                         },
-                        new Cinema()
+                        new Cinemas()
                         {
                             Name = "Cinema 4",
                             LogoURL = "http://dotnethow.net/images/cinemas/cinema-4.jpeg",
-                            Description = "This is the description of the first cinema"
+                            DescriptionCin = "This is the description of the fourth cinema"
                         },
-                        new Cinema()
+                        new Cinemas()
                         {
                             Name = "Cinema 5",
                             LogoURL = "http://dotnethow.net/images/cinemas/cinema-5.jpeg",
-                            Description = "This is the description of the first cinema"
+                            DescriptionCin = "This is the description of the fifth cinema"
                         },
                     });
                     context.SaveChanges();

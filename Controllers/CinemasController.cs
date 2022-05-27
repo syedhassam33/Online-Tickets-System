@@ -16,7 +16,8 @@ namespace OnlineTicketSystem.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            var listCinemas = _context.Cinemas.ToList();
+            return View(listCinemas);
         }
     }
 }

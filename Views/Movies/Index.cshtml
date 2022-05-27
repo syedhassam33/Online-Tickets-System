@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Movie>
+
+@{
+    ViewData["Title"] = "Movies List";
+}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <table class="table">
+            <tr class="text-center">
+                <th>@Html.DisplayNameFor(model => model.ImgURL)</th>
+                <th>@Html.DisplayNameFor(model => model.Name)</th>
+                <th>@Html.DisplayNameFor(model => model.Description)</th>
+            </tr>
+            @foreach (var item in Model)
+	               {
+        <tr>
+            <td class="align-middle">
+                <img class="rounded-circle" src="@item.ImgURL" alt="@item.Name" style="max-width: 150px" />
+            </td>
+            <td class="align-middle">
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td class="align-middle">
+                @Html.DisplayNameFor(modelItem => item.Description)
+            </td>
+            
+        </tr>
+	               }
+        </table>
+    </div>
+
+</div>

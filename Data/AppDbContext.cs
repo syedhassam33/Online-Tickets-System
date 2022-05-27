@@ -32,7 +32,7 @@ namespace OnlineTicketSystem.Data
         public DbSet<Actors> Actors { get; set; }
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Actors_Movies> Actors_Movies { get; set; }
-        public DbSet<Cinema> Cinemas { get; set; }
+        public DbSet<Cinemas> Cinemas { get; set; }
         public DbSet<Producers> Producers { get; set; }
 
     }
