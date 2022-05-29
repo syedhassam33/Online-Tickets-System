@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using OnlineTicketSystem.Data;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace OnlineTicketSystem.Controllers
         }
         public IActionResult Index()
         {
-            var listMovies = _context.Movies.ToList();
+            var listMovies = _context.Movies.Include(n => n.Cinema).OrderBy(n => n.Cinema.Name).ToList();
             return View(listMovies);
         }
     }
