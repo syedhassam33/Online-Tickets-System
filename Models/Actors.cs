@@ -14,8 +14,11 @@ namespace OnlineTicketSystem.Models
         [Display(Name = "Picture")]
         public string ActPictureURL { get; set; }
         [Display(Name = "Full Name")]
+        [Required(ErrorMessage = "Full Name is required!")]
+        [StringLength(50,MinimumLength = 3, ErrorMessage = "You should meet the required condition of Min 3 or Max 50 Characters.")]
         public string FullName { get; set; }
         [Display(Name = "About")]
+
         public string AboutAct { get; set; }
 
         //Relationship

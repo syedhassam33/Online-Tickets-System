@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using OnlineTicketSystem.Data;
+using OnlineTicketSystem.Data.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,7 @@ namespace OnlineTicketSystem
             //Adding Configuration for DbContext
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Database-conn")));
             services.AddControllersWithViews();
+            services.AddScoped<IActorsServices, ActorsServices>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
